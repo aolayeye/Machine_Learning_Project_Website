@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap/Bootswatch CSS -->
+  <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/3/darkly/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+  <!-- <link rel="shortcut icon" href="/static/favicon.png"> -->
+
+  <title>Machine Learning Project | Northwestern Data Bootcamp</title>
+  
+</head>
+<body>
+  <!-- navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-1">
+    <div class="container">
+      <a class="navbar-brand" href="/">Northwestern Data Bootcamp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" style="">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+          <!-- <li class="nav-item">
+            <a id="about-me" class="nav-link" href="/#about">About</a>
+          </li> -->
+          <!-- <li class="nav-item"> -->
+            <!-- <a class="nav-link " href="/topics">Toolkit</a> -->
+          <!-- </li> -->
+          <li class="nav-item">
+            <a class="nav-link " href="/data-portfolio">Portfolio</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link " href="/music">Music</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:ayo.olayeye@outlook.com">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="github" href="https://github.com/aolayeye" target="_blank">
+              <img src="/static/images/github.png" alt="github"></a>  
+            </li>
+            <li class="nav-item">
+              <a class="linkedin" href="https://www.linkedin.com/in/aolayeye/" target="_blank">
+              <img src="/static/images/linkedin.png" alt="LinkedIn"></a> 
+            </li>
+        </ul>
+    </div>
+    </div>
+  </nav>
+  <script>
+  if (document.location.hash==='#about'){
+      document.querySelector('#about-me').classList.add('active');
+    }
+  </script>
+  <!-- header -->
+  <div class="container">
+    <div class="jumbotron text-center py-2 my-2">
+      <h3>Credit Card Fraud Detection</h3>
+      <p class="lead my-0"><strong>Machine Learning Project Website</strong><p>
+      <p class="my-0"><em></em></p>
+    </div>
+  </div><!-- /header -->
+
+  
+<div class="container">
+  <p class="lead mt-3">This web page contains readme content and links to the presentation and dashboard for credit card fraud detection machine learning project
+    <a href="https://github.com/dsaulsb1/Fraud-Project/tree/olus-branch-segment-three" target="_blank">Code can found here</a></p>
+  <h1>Credit Card Fraud Detection</h1>
+  <h2>Overview</h2>
+    <p>
+      The Annual Data Book compiled by the Federal Trade Commission reports that Credit card fraud accounted for 393,207 of the nearly 1.4 million reports of identity theft in 2020. 
+      This makes credit card fraud the second most common type of identity theft reported, behind only government documents and benefits fraud for that year. 
+      Some surveys suggest that a typical organization loses 5% of their yearly revenues to fraud. 
+      These numbers can only increase since the number of non-cash transactions increases provides more opportunities for credit card fraud.
+  </p>
+  For retailers and banks to not lose money, procedures must be put in place to detect fraud prior to it occurring. 
+  Credit card companies must identify fraudulent credit card transactions so that customers are not charged for items that they did not purchase. 
+  To combat this problem, financial institution traditionally uses rule-based approaches to identify fraudulent transactions. 
+  These algorithms use strict rules to determine when a transaction is fraudulent.
+  <p>
+    Some challenges of a strict rule-based algorithm include:
+</p>
+<ul>
+  <li>Any new scenario that could lead to fraud needs to be manually coded into the algorithm</li>
+  <li>Increases in customers and size of data leads to a corresponding increase in the human effort, 
+    time and cost required to track new scenarios and update the algorithm</li>
+  <li>Since the algorithm cannot go beyond defined rules, 
+    it cannot dynamically recognize new scenarios that could result in fraudulent transaction.</li>
+</ul>
+
+<p>
+  To overcome these limitations, organizations are beginning to utilize machine learning and data science to build fraud detection systems. 
+  Given the size of available data, computational resources, and powerful machine learning algorithm available today, 
+  data science and machine learning processes will be able to find patterns in data and detect frauds easily.
+</p>
+
+<h2>The Dataset</h2>
+
+<p>
+  The goal of this Credit Card Fraud Detection project is to classify a transaction as valid or fraudulent in a large dataset. 
+  Since we are dealing with discrete values, this is a binary classification problem, and we would employ the use of a supervised machine learning algorithm. 
+  The dataset used contains transactions made by credit cards in September 2013 by European cardholders. 
+  This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions.
+
+  The dataset is highly unbalanced; the positive class (frauds) account for 0.172% of all transactions. 
+  The dataset contains only numerical input variables which are the result of a PCA transformation which was done to deidentify and anonymize the dataset for confidentiality issues. 
+  Features V1, V2, ... V28 are the extracted features obtained with PCA, the only features which have not been transformed with PCA are ‘Time’ and ‘Amount’. 
+  Feature ‘Time’ contains the seconds elapsed between each transaction and the first transaction in the dataset. 
+  The feature ‘Amount' is the transaction Amount. Feature 'Class' is the response variable, and it takes value 1 in case of fraud and 0 otherwise.
+</p>
+
+<h2>Initial Approach</h2>
+
+<p>
+  The is an imbalanced dataset. The imbalance between classes is compensated using oversampling and under sampling. 
+  The logistic regression, random forest, support vector machine, k-means are used within a cross-validation framework. 
+  Lastly, recall and accuracy are considered as metrics while choosing the best classifier.
+</p>
+
+<h2>Control Flow</h2>
+<ul>
+  <li>Understanding the problem</li>
+  <li>Importing required libraries and understanding their use</li>
+  <li>Importing data and learning its structure</li>
+  <li>Performing basic EDA</li>
+  <li>Scaling different variables</li>
+  <li>Outlier treatment</li>
+  <li>Building basic Classification model with Random Forest</li>
+  <li>Nearmiss technique for under sampling data</li>
+  <li>SMOTE for oversampling data</li>
+  <li>cross validation in the context of under sampling and oversampling</li>
+  <li>Pipelining with sklearn/imblearn</li>
+  <li>Applying Linear model: Logistic Regression</li>
+  <li>Applying Ensemble technique: Random Forest</li>
+  <li>Applying Non-Linear Algorithms: Support Vector Machine, Decision Tree, and k-Nearest Neighbor</li>
+  <li>Making predictions on test set and computing validation metrics</li>
+  <li>ROC curve and Learning curve</li>
+  <li>Comparison of results and Model Selection</li>
+  <li>Visualization with seaborn and matplotlib</li>
+</ul>
+  <img src="images/Solution Workflow.jpg" class="img-fluid" alt="Solution Workflow">
+  
+  <h2>Technology</h2>
+
+  <h3>Logistic Regression</h3>
+
+  <p>
+    Logistic regression is a classification algorithm used to find the probability of event success and event failure. 
+    It is used when the dependent variable is binary (0/1, True/False, Yes/No) in nature. 
+    It supports categorizing data into discrete classes by studying the relationship from a given set of labelled data. 
+    It learns a linear relationship from the given dataset and then introduces a non-linearity in the form of the Sigmoid function.
+  </p>
+
+  <h3>Why Logistic Regression</h3>
+  <ul>
+    <li>Logistic regression is easy to implement, interpret, and very efficient to train.</li>
+    <li>It makes no assumptions about distributions of classes in feature space.</li>
+    <li>It not only provides a measure of how appropriate a predictor (coefficient size) is, but also 
+      its direction of association (positive or negative).</li>
+    <li>It has Good accuracy for many simple data sets and it performs well when the dataset is linearly separable.</li>
+  </ul>
+<h3>Random Forest</h3>
+  <p>
+    Random forest is a technique used in modeling predictions and behavior analysis and is built on decision trees. 
+    It contains many decision trees representing a distinct instance of the classification of data input into the random forest. 
+    The random forest technique considers the instances individually, taking the one with most votes as the selected prediction.
+  </p>
+
+  <h3>Why Random Forest</h3>
+  <ul>
+    <li>It reduces overfitting in decision trees and helps to improve the accuracy</li>
+    <li>It is flexible to both classification and regression problems</li>
+    <li>It works well with both categorical and continuous values</li>
+    <li>It automates missing values present in the data</li>
+    <li>Normalizing of data is not required as it uses a rule-based approach.</li>
+  </ul>
+  <h3>SVM</h3>
+  <p>While SVMs do a good job recognizing speech, face, and images, they also do a good job at pattern recognition. 
+    Pattern recognition aims to classify data based on either a priori knowledge or statistical information extracted from raw data, 
+    which is a powerful tool in data separation in many disciplines.</p>
+
+  <h3>Why SVM</h3>
+  <ul>
+    <li>SVM works relatively well when there is a clear margin of separation between classes.</li>
+    <li>SVM is effective in high dimensional spaces.</li>
+    <li>SVM can be used for other types of machine learning problems, such as regression, outlier detection, 
+      and clustering.</li>
+      <li></li>
+  </ul>
+
+  <h3>K-Means clustering</h3>
+  <p>
+    K-means is a centroid-based algorithm, or a distance-based algorithm, where we calculate the distances to assign a point to a cluster. 
+    In K-Means, each cluster is associated with a centroid.
+  </p>
+
+  <h3>Why K-Means clustering</h3>
+  <ul>
+    <li>It is easy to implement k-means and identify unknown groups of data from complex data sets.</li>
+    <li>The results are easily presented and straighforward</li>
+    <li>K-means algorithm can easily adjust to the changes.</li>
+    <li>If there are any problems, adjusting the cluster segment will allow quick changes to the algorithm.</li>
+    <li> K-means easily scales to large datasets.</li>
+  </ul>
+
+  <h3>Database Approach</h3>
+  <ul>
+    <li>Load raw dataset into AWS S3 bucket/PgAdmin</li>
+    <li>Connect to AWS S3 bucket/PgAdmin and read data into Pandas</li>
+    <li>Load the raw data into a PgAdmin Database Instance located in AWS</li>
+    <li>Perform preprocessing steps and store cleaned data in a new table in AWS S3 bucket/PgAdmin</li>
+    <li>Store some intermediate results (which can be used later for visualization) in AWS S3 bucket/PgAdmin</li>
+    <li>The connection and S3 bucket details are in the Segment_One Jupyter Notebook.</li>
+    <li>A notebook that contains the code of the above steps is part of this repository.</li>
+  </ul>
+
+  <h3>Data Cleaning and Analysis</h3>
+  <p>
+    This project will utilize Jupyter notebook and the pandas library to perform data cleaning and analysis
+  </p>
+  <h3>Description of Communication Protocols</h3>
+  <ul>
+    <li>Comminucation for this project will be via a Slack Group Chat.</li>
+    <li>Every team member will work in their individual branches.</li>
+    <li>Team members will create pull requests which will be collectively approved in the slack channel.</li>
+    <li>A designated team member will validate the pull request, and merge the request to the main branch.</li>
+  </ul>
+
+  <h2>Results</h2>
+  <h3>Database ERD</h3>
+  <p>Database ERD shows all tables used to store intermediate exploratory data analysis results, and modelling results.</p>
+
+  <img src="images/Segment_Three_ERD.png" class="img-fluid" alt="Database ERD">
+  <h3>Exploratory Data Analysis</h3>
+  <h4>Univariate Analysis:</h4>
+  <ul>
+    <li>Univariate plots show that the dataset is highly imbalanced.</li>
+    <li>The pie chart shows an imbalance in the data, with only 0.17% of the total cases being fraudulent.</li>
+    <li>The univariate distribution plot of the time and amount feature show we have a dataset with some 
+      large outlier values for amount.</li>
+    <li>The time feature is distributed across two days</li>
+    <li>Bivariate plots show that the valid transaction class has a normal distribution shape across most 
+      of the features.</li>
+    <li>Conversely, the fraud class show long-tailed distribution across many of the features.</li>
+  </ul>
+
+  <h4>Univariate Analysis Results</h4>
+  <img src="images/Result_Pie_Chart.png" class="img-fluid" alt="pie chart">
+  <img src="images/Univariate_Analysis_Time_Amount_Distribution.png" class="img-fluid" alt="Time_Amount_Distributions">
+  
+  <h4>Bivariate Analysis</h4>
+  <ul>
+    <li>Bivariate analysis show that </li>
+  </ul>
+  <img src="images/Bivariate_Analysis_Distr_Plots.png" class="img-fluid" alt="Dist Plots">
+    
+<h4>Naive Model Results</h4>
+<ul>
+  <li>While the naive logistic classifier accuracy is 100%, our classifier did not do an excellent job at 
+    predicting fraudulent transactions. </li>
+  <li>With precision and recall of 0.84 and 0.62, we would need a better understanding of the dataset to 
+    determine the best way to improve the recall metric.</li>
+  <li>While the naive random forest classifier accuracy is 100%, and precision is 95%, our random forest 
+    classifier only achieved a 77% recall.</li>
+  <li>We would need a better understanding of the dataset to determine the best way to improve the 
+    recall metric.</li>
+</ul>
+
+<h4>Naive Model Results</h4>
+<img src="images/Naive_Model_Results.png" class="img-fluid" alt="Naive Model">
+
+<h3>Link To Presentation</h3>
+
+<div class="card bg-dark">
+  <a href="https://docs.google.com/presentation/d/1dZFGsjNqBm8g_7548PAecGgwXyDAJgDpwp7bEyCh3jY/edit?usp=sharing">
+    <img class="card-img-top" src="images/presentation.png" alt="Presentation">
+    <div class="card-body">
+      <p class="card-title text-white">Presentation</p>
+    </div>
+  </a>
+</div>
+
+<h3>Link To Dashboard</h3>
+
+<div class="card bg-dark">
+  <a href="machine_learning_dashboard.html">
+    <img class="card-img-top" src="images/dashboard.png" alt="Tableau Dashboard.js">
+    <div class="card-body">
+      <p class="card-title text-white">Tableau Dashboard</p>
+    </div>
+  </a>
+</div>
+
+  
+
+  
+</div><!-- /container -->
+
+
+  <!-- footer -->
+  <nav class="navbar navbar-dark bg-dark p-1 mt-5">
+    <p class="mx-auto py-0">©2021 Oluwaseyi olayeye</p>
+  </nav>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
