@@ -79,8 +79,8 @@
 <div class="container">
   <p class="lead mt-3">This web page contains readme content and links to the presentation and dashboard for credit card fraud detection machine learning project
     <a href="https://github.com/dsaulsb1/Fraud-Project" target="_blank">Code can be found here</a></p>
-  <h2>Credit Card Fraud Detection</h2>
-  <h3>Overview</h3>
+  <h3>Credit Card Fraud Detection</h3>
+  <h4>Overview</h4>
     <p>
       The Annual Data Book compiled by the Federal Trade Commission reports that Credit card fraud accounted for 393,207 of the nearly 1.4 million reports of identity theft in 2020. 
       This makes credit card fraud the second most common type of identity theft reported, behind only government documents and benefits fraud for that year. 
@@ -108,7 +108,7 @@
   data science and machine learning processes will be able to find patterns in data and detect frauds easily.
 </p>
 
-<h3>The Dataset</h3>
+<h4>The Dataset</h4>
 
 <p>
   The goal of this Credit Card Fraud Detection project is to classify a transaction as valid or fraudulent in a large dataset. 
@@ -123,7 +123,7 @@
   The feature ‘Amount' is the transaction Amount. Feature 'Class' is the response variable, and it takes value 1 in case of fraud and 0 otherwise.
 </p>
 
-<h3>Initial Approach</h3>
+<h4>Initial Approach</h4>
 
 <p>
   The is an imbalanced dataset. The imbalance between classes is compensated using oversampling and under sampling. 
@@ -131,7 +131,7 @@
   Lastly, recall and accuracy are considered as metrics while choosing the best classifier.
 </p>
 
-<h3>Control Flow</h3>
+<h4>Control Flow</h4>
 <ul>
   <li>Understanding the problem</li>
   <li>Importing required libraries and understanding their use</li>
@@ -154,9 +154,9 @@
 </ul>
   <img src="images/Solution Workflow.jpg" class="img-fluid" alt="Solution Workflow">
   
-  <h2>Technology</h2>
+  <h3>Technology</h3>
 
-  <h3>Logistic Regression</h3>
+  <h4>Logistic Regression</h4>
 
   <p>
     Logistic regression is a classification algorithm used to find the probability of event success and event failure. 
@@ -165,7 +165,7 @@
     It learns a linear relationship from the given dataset and then introduces a non-linearity in the form of the Sigmoid function.
   </p>
 
-  <h3>Why Logistic Regression</h3>
+  <h4>Why Logistic Regression</h4>
   <ul>
     <li>Logistic regression is easy to implement, interpret, and very efficient to train.</li>
     <li>It makes no assumptions about distributions of classes in feature space.</li>
@@ -173,14 +173,14 @@
       its direction of association (positive or negative).</li>
     <li>It has Good accuracy for many simple data sets and it performs well when the dataset is linearly separable.</li>
   </ul>
-<h3>Random Forest</h3>
+<h4>Random Forest</h4>
   <p>
     Random forest is a technique used in modeling predictions and behavior analysis and is built on decision trees. 
     It contains many decision trees representing a distinct instance of the classification of data input into the random forest. 
     The random forest technique considers the instances individually, taking the one with most votes as the selected prediction.
   </p>
 
-  <h3>Why Random Forest</h3>
+  <h4>Why Random Forest</h4>
   <ul>
     <li>It reduces overfitting in decision trees and helps to improve the accuracy</li>
     <li>It is flexible to both classification and regression problems</li>
@@ -188,12 +188,12 @@
     <li>It automates missing values present in the data</li>
     <li>Normalizing of data is not required as it uses a rule-based approach.</li>
   </ul>
-  <h3>SVM</h3>
+  <h4>SVM</h4>
   <p>While SVMs do a good job recognizing speech, face, and images, they also do a good job at pattern recognition. 
     Pattern recognition aims to classify data based on either a priori knowledge or statistical information extracted from raw data, 
     which is a powerful tool in data separation in many disciplines.</p>
 
-  <h3>Why SVM</h3>
+  <h4>Why SVM</h4>
   <ul>
     <li>SVM works relatively well when there is a clear margin of separation between classes.</li>
     <li>SVM is effective in high dimensional spaces.</li>
@@ -202,13 +202,13 @@
       <li></li>
   </ul>
 
-  <h3>K-Means clustering</h3>
+  <h4>K-Means clustering</h4>
   <p>
     K-means is a centroid-based algorithm, or a distance-based algorithm, where we calculate the distances to assign a point to a cluster. 
     In K-Means, each cluster is associated with a centroid.
   </p>
 
-  <h3>Why K-Means clustering</h3>
+  <h4>Why K-Means clustering</h4>
   <ul>
     <li>It is easy to implement k-means and identify unknown groups of data from complex data sets.</li>
     <li>The results are easily presented and straighforward</li>
@@ -217,7 +217,7 @@
     <li> K-means easily scales to large datasets.</li>
   </ul>
 
-  <h3>Database Approach</h3>
+  <h4>Database Approach</h4>
   <ul>
     <li>Load raw dataset into AWS S3 bucket/PgAdmin</li>
     <li>Connect to AWS S3 bucket/PgAdmin and read data into Pandas</li>
@@ -228,11 +228,11 @@
     <li>A notebook that contains the code of the above steps is part of this repository.</li>
   </ul>
 
-  <h3>Data Cleaning and Analysis</h3>
+  <h4>Data Cleaning and Analysis</h4>
   <p>
     This project will utilize Jupyter notebook and the pandas library to perform data cleaning and analysis
   </p>
-  <h3>Description of Communication Protocols</h3>
+  <h4>Description of Communication Protocols</h4>
   <ul>
     <li>Comminucation for this project will be via a Slack Group Chat.</li>
     <li>Every team member will work in their individual branches.</li>
@@ -240,8 +240,8 @@
     <li>A designated team member will validate the pull request, and merge the request to the main branch.</li>
   </ul>
 
-  <h2>Results</h2>
-  <h3>Database ERD</h3>
+  <h3>Results</h3>
+  <h4>Database ERD</h4>
   <p>Database ERD shows all tables used to store intermediate exploratory data analysis results, and modelling results.</p>
 
   <img src="images/Segment_Three_ERD.png" class="img-fluid" alt="Database ERD">
