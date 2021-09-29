@@ -36,13 +36,13 @@ Also, designing and implementing a dashboard from a dataset with features extrac
 #### Team Assessment
 
 The team developed a communication plan early in the project. This plan includes communication via
-•	slack, where ideas are exchanged and documented.
-•	All team members created individual branches where they could work on different portions of the project
-•	Team members commit changes to their GitHub branches frequently.
-•	Progress is shared in slack, and pull requests are created at periodic intervals after approval by the team
-•	A designated member reviews the pull request, executes the merge.
-A significant accomplishment for the team was finishing the considerable parts of the project with some time to spare; this is due in part to finding a topic and dataset before the project started.
-The team was visible and available, and everyone offered to help each other whenever possible. As a result, the team can reduce the cycle time between changes and validation.
+1. slack, where ideas are exchanged and documented.
+2. All team members created individual branches where they could work on different portions of the project
+3. Team members commit changes to their GitHub branches frequently.
+4. Progress is shared in slack, and pull requests are created at periodic intervals after approval by the team
+5. A designated member reviews the pull request, executes the merge.
+6. A significant accomplishment for the team was finishing the considerable parts of the project with some time to spare; this is due in part to finding a topic and dataset before the project started.
+7. The team was visible and available, and everyone offered to help each other whenever possible. As a result, the team can reduce the cycle time between changes and validation.
 
 
 #### Project Summary
