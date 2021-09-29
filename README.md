@@ -1,11 +1,11 @@
 # Machine_Learning_Project_Website
-### Overview
+## Overview
 The website contained in this repo contains a summary readme, links to the machine learning code, a google slides presentation and the online interactive Tableau dashboard.
 This readme also provides a self-assesment, team assessment, and project summary 
 
 [Link to Website](https://aolayeye.github.io/Machine_Learning_Project_Website/ "Link to Website")
 
-#### Project Experience
+### Project Experience
 #### Self-Assessment
 
 ##### Segment One – Triangle, Circle, and X Roles
